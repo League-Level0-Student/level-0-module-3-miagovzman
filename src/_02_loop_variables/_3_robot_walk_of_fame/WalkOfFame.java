@@ -5,7 +5,27 @@ import org.jointheleague.graphical.robot.Robot;
 
 public class WalkOfFame {
 	public static void main(String[] args) {
-		Robot rob = new Robot();
+		Robot robot = new Robot("mini");
+		// setup the robot
+		robot.setX(50);
+		robot.setY(300);
+		robot.setSpeed(30);
+		robot.setAngle(90);
+		
+		
+	// in total, these nested loops run 25 times
+	for(int j = 0; j < 5; j++) {
+		for(int i = 0; i < 5; i++) {
+			robot.penDown();
+			robot.move(100);
+			robot.turn(144);
+		}
+		robot.penUp();
+		robot.move(150);
+		
+	}
+}
+}
 		
 		// 1. Set the X position of the robot so that it starts on the left. 
 		// You also need to show the robot to see the result of this line.
@@ -21,6 +41,4 @@ public class WalkOfFame {
 		 * Hint: The distance between stars is 50.
 		 */
 
-	}
 
-}
